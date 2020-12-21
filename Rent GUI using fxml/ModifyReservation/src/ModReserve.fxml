@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModRsvController">
+	<children>
+		<Label layoutX="43.0" layoutY="41.0" prefHeight="35.0" prefWidth="173.0" text="Modify Reservation">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Label>
+		<Label layoutX="77.0" layoutY="100.0" prefHeight="35.0" prefWidth="173.0" text="Enter reservation number">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<TextField fx:id="text1" layoutX="300.0" layoutY="104.0" promptText="Reservation Number" />
+		<Label layoutX="77.0" layoutY="162.0" text="Choose what you want to modify">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<GridPane layoutX="127.0" layoutY="200.0" prefHeight="75.0" prefWidth="336.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="34.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<CheckBox fx:id="cb1" mnemonicParsing="false" text="Car Details" />
+				<CheckBox fx:id="cb2" mnemonicParsing="false" text="Credit Card Information" GridPane.columnIndex="1" />
+				<CheckBox fx:id="cb3" mnemonicParsing="false" text="Reservation Duration" GridPane.rowIndex="1" />
+				<CheckBox fx:id="cb4" mnemonicParsing="false" text="Payment Method" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+			</children>
+		</GridPane>
+		<Label layoutX="77.0" layoutY="313.0" prefHeight="35.0" prefWidth="185.0" text="Write modification details">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+		<TextArea fx:id="text2" layoutX="77.0" layoutY="355.0" prefHeight="125.0" prefWidth="461.0" promptText="Express your modifications" />
+		<Button fx:id="btn_mod" layoutX="353.0" layoutY="533.0" mnemonicParsing="false" onAction="#displayMessage" prefHeight="27.0" prefWidth="207.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Submit modification request" />
+	</children>
+</AnchorPane>
